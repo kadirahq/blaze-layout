@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/meteorhacks/flow-layout.svg?branch=master)](https://travis-ci.org/meteorhacks/flow-layout)
+
 # meteorhacks:flow-layout
 
 ### Layout Manager for Meteor
