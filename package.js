@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Flow Layout',
-  version: '0.0.19',
+  version: '1.0.0',
   git: 'https://github.com/meteorhacks/flow-layout',
   name: "meteorhacks:flow-layout"
 });
