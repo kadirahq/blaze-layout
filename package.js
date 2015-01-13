@@ -13,7 +13,10 @@ Package.onUse(function (api) {
 Package.onTest(function(api) {
   configure(api);
   api.use('tinytest');
+  api.addFiles('tests/client/init.templates.html', 'client');
+  api.addFiles('tests/client/init.templates.js', 'client');
   api.addFiles('tests/client/unit.js', 'client');
+  api.addFiles('tests/client/integration.js', 'client');
 });
 
 function configure(api) {

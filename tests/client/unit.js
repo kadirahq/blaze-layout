@@ -1,10 +1,10 @@
-Tinytest.add('FlowLayout._regionsToData', function(test) {
+Tinytest.add('Unit - FlowLayout._regionsToData', function(test) {
   var data = FlowLayout._regionsToData({aa: 10, bb: "hello"});
   test.equal(data.aa(), 10);
   test.equal(data.bb(), "hello");
 });
 
-Tinytest.addAsync('FlowLayout._updateRegions', function(test, done) {
+Tinytest.addAsync('Unit - FlowLayout._updateRegions', function(test, done) {
   var aa = null;
   var bb = null;
 
