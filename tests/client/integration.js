@@ -44,3 +44,40 @@ Tinytest.addAsync("Integration - re-render for the new layout", function(test, d
     Meteor.setTimeout(done, 0);
   }
 });
+
+Tinytest.addAsync("Integration - pick new data", function(test, done) {
+  FlowLayout.reset();
+
+  FlowLayout.render('layout3', {aa: 10});
+
+  Tracker.afterFlush(function() {
+    test.isTrue(/10/.test($('#__flow-root').text()));
+    FlowLayout.render('layout3', {aa: 30, bb: 20});
+    Tracker.afterFlush(checkStatus);
+  });
+
+  function checkStatus() {
+    test.isTrue(/30/.test($('#__flow-root').text()));
+    test.isTrue(/20/.test($('#__flow-root').text()));
+    Meteor.setTimeout(done, 0);
+  }
+});
+
+Tinytest.addAsync("Integration - do not re-render vars again", function(test, done) {
+  FlowLayout.reset();
+
+  FlowLayout.render('layout3', {aa: 10, bb: 20});
+
+  Tracker.afterFlush(function() {
+    test.isTrue(/10/.test($('#__flow-root').text()));
+    test.isTrue(/20/.test($('#__flow-root').text()));
+    $('#__flow-root').html('');
+    FlowLayout.render('layout3', {aa: 10, bb: 20});
+    Tracker.afterFlush(checkStatus);
+  });
+
+  function checkStatus() {
+    test.equal($('#__flow-root').html(), '');
+    Meteor.setTimeout(done, 0);
+  }
+});
