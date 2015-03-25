@@ -33,7 +33,25 @@ Tinytest.addAsync("Integration - re-render for the new layout", function(test, d
   FlowLayout.render('layout1');
 
   Tracker.afterFlush(function() {
-    FlowLayout.render('layout2');
+    FlowLayout.render('layout2', {aa: 899});
+    Tracker.afterFlush(checkStatus);
+  });
+
+  function checkStatus() {
+    test.isTrue(/899/.test($('#__flow-root').text()));
+    Meteor.setTimeout(done, 0);
+  }
+});
+
+Tinytest.addAsync("Integration - render the new layout with data", function(test, done) {
+  FlowLayout.reset();
+  ResetStats('layout1');
+  ResetStats('layout2');
+
+  FlowLayout.render('layout1');
+
+  Tracker.afterFlush(function() {
+    FlowLayout.render('layout2', {});
     Tracker.afterFlush(checkStatus);
   });
 
