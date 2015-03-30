@@ -63,7 +63,7 @@ Since only the `main` is changed, `top` section won't get re-rendered. Here's th
 
 ~~~html
   <h1>This is the header</h1>
-  <h2>This is the postList area.</h2>
+  <h2>This is the singlePost area.</h2>
 ~~~
 
 ### Rendering Multiple Templates
