@@ -20,8 +20,8 @@ Package.onTest(function(api) {
 });
 
 function configure(api) {
-  api.versionsFrom('METEOR@0.9.2');
-  api.use('ui');
+  api.versionsFrom('1.0');
+  api.use('blaze');
   api.use('templating');
   api.use('reactive-dict');
   api.use('underscore');
