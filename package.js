@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Layout Manager for Meteor (designed for flow)',
-  version: '1.1.1',
+  version: '1.2.0',
   git: 'https://github.com/meteorhacks/flow-layout',
   name: "meteorhacks:flow-layout"
 });
