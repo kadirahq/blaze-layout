@@ -99,3 +99,17 @@ Tinytest.addAsync("Integration - do not re-render vars again", function(test, do
     Meteor.setTimeout(done, 0);
   }
 });
+
+Tinytest.addAsync("Integration - using a different ROOT", function(test, done) {
+  FlowLayout.reset();
+  var rootNode = $("<div id='iam-root'></div>");
+  FlowLayout.setRoot("#iam-root")
+  $('body').append(rootNode);
+
+  FlowLayout.render('layout1', {aa: 200});
+  Tracker.afterFlush(function() {
+    test.isTrue(/200/.test($('#iam-root').text()));
+    Meteor.setTimeout(done, 0);
+    rootNode.remove();
+  });
+});

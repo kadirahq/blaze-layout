@@ -27,6 +27,5 @@ function configure(api) {
   api.use('underscore');
 
   api.addFiles('lib/client/namespace.js', 'client');
-  api.addFiles('lib/client/root.html', 'client');
   api.addFiles('lib/client/layout.js', 'client');
 }

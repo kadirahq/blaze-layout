@@ -72,3 +72,15 @@ Likewise you can create multiple templates and switch between each other.
 But when you are changing the layout, whole UI will get re-rendered again.
 
 So, it's a good idea to use a few layouts if possible.
+
+### Set Root Node
+
+By default, Flow Layout render layouts into a DOM element with the id `__flow-root`. Sometimes, you may need to change it or just render layouts into the body. If so, here's how to do it.
+
+Add following code inside on the top of one of your client side JS file:
+
+~~~js
+FlowLayout.setRoot('body');
+~~~
+
+You can set any CSS selector or any jQuery object as the root.
