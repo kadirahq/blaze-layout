@@ -73,7 +73,7 @@ But when you are changing the layout, whole UI will get re-rendered again.
 
 So, it's a good idea to use a few layouts if possible.
 
-### Set Root Node
+### Set Different Root Node
 
 By default, Flow Layout render layouts into a DOM element with the id `__flow-root`. Sometimes, you may need to change it or just render layouts into the body. If so, here's how to do it.
 
