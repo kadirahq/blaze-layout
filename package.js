@@ -24,8 +24,10 @@ function configure(api) {
   api.use('blaze');
   api.use('templating');
   api.use('reactive-dict');
+  api.use('reactive-var');
   api.use('underscore');
 
   api.addFiles('lib/client/namespace.js', 'client');
+  api.addFiles('lib/client/root.html', 'client');
   api.addFiles('lib/client/layout.js', 'client');
 }
