@@ -1,5 +1,9 @@
 # Change Log
 
+### v1.4.2
+
+* Fix [#32](https://github.com/meteorhacks/flow-layout/issues/32) - Where flow layout does not clean removed regions
+
 ### v1.4.1
 
 * Fix a load order issue where FlowLayout starts to render before the ROOT node inserted to DOM. See issue [#25](https://github.com/meteorhacks/flow-layout/issues/25)
