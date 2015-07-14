@@ -81,6 +81,25 @@ Tinytest.addAsync("Integration - pick new data", function(test, done) {
   }
 });
 
+Tinytest.addAsync("Integration - when data not exits in the second time", function(test, done) {
+  FlowLayout.reset();
+
+  FlowLayout.render('layout3', {aa: 30, bb: 100});
+
+  Tracker.afterFlush(function() {
+    test.isTrue(/100/.test($('#__flow-root').text()));
+    test.isTrue(/30/.test($('#__flow-root').text()));
+    FlowLayout.render('layout3', {aa: 20});
+    Tracker.afterFlush(checkStatus);
+  });
+
+  function checkStatus() {
+    test.isTrue(/20/.test($('#__flow-root').text()));
+    test.isFalse(/100/.test($('#__flow-root').text()));
+    Meteor.setTimeout(done, 0);
+  }
+});
+
 Tinytest.addAsync("Integration - do not re-render vars again", function(test, done) {
   FlowLayout.reset();
 
