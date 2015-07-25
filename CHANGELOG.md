@@ -1,5 +1,9 @@
 # Change Log
 
+### kadira:blaze-layout@2.0.0
+* Rename the namespace as BlazeLayout
+* Move package into `kadira:blaze-layout`
+
 ### v1.4.2
 
 * Fix [#32](https://github.com/meteorhacks/flow-layout/issues/32) - Where flow layout does not clean removed regions

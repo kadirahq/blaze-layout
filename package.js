@@ -1,13 +1,13 @@
 Package.describe({
-  summary: 'Layout Manager for Meteor (designed for flow)',
-  version: '1.4.2',
-  git: 'https://github.com/meteorhacks/flow-layout',
-  name: "meteorhacks:flow-layout"
+  summary: 'Layout Manager for Blaze (works well with FlowRouter)',
+  version: '2.0.0',
+  git: 'https://github.com/kadirahq/blaze-layout',
+  name: "kadira:blaze-layout"
 });
 
 Package.onUse(function (api) {
   configure(api);
-  api.export(['FlowLayout']);
+  api.export(['BlazeLayout']);
 });
 
 Package.onTest(function(api) {
