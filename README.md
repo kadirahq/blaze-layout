@@ -46,6 +46,14 @@ Now you can render the layout with:
 BlazeLayout.render('layout1', { top: "header", main: "postList" });
 ~~~
 
+Or you can define a helper to call later with a pre-defined layout:
+
+~~~js
+var dashboardRender = Blaze.wrapRender('dashboardLayout');
+// ... later ...
+dashboardRender({content: 'clientList'});
+~~~
+
 Then you will get output like below:
 
 ~~~html
