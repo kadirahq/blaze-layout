@@ -119,6 +119,16 @@ Tinytest.addAsync("Integration - do not re-render vars again", function(test, do
   }
 });
 
+Tinytest.addAsync("Integration - render to the dom with no regions", function(test, done) {
+  BlazeLayout.reset();
+  BlazeLayout.render('layout1', {aa: 200});
+  BlazeLayout.render('layout1');
+  Tracker.afterFlush(function() {
+    test.isTrue(/aa/.test($('#__blaze-root').text()));
+    Meteor.setTimeout(done, 0);
+  });
+});
+
 Tinytest.addAsync("Integration - using a different ROOT", function(test, done) {
   BlazeLayout.reset();
   var rootNode = $("<div id='iam-root'></div>");
@@ -128,6 +138,7 @@ Tinytest.addAsync("Integration - using a different ROOT", function(test, done) {
   BlazeLayout.render('layout1', {aa: 200});
   Tracker.afterFlush(function() {
     test.isTrue(/200/.test($('#iam-root').text()));
+    BlazeLayout.setRoot("#__blaze-root");
     Meteor.setTimeout(done, 0);
     rootNode.remove();
   });
