@@ -1,5 +1,8 @@
 # Change Log
 
+### v2.0.1
+* Set a default value for regions if it's empty. Solves [FlowRouter/#283](https://github.com/kadirahq/flow-router/issues/283)
+
 ### kadira:blaze-layout@2.0.0
 * Rename the namespace as BlazeLayout
 * Move package into `kadira:blaze-layout`
