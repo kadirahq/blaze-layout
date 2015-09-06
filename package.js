@@ -25,6 +25,7 @@ function configure(api) {
   api.use('templating');
   api.use('reactive-dict');
   api.use('underscore');
+  api.use('jquery');
 
   api.addFiles('lib/client/namespace.js', 'client');
   api.addFiles('lib/client/layout.js', 'client');
