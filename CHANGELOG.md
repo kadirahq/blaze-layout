@@ -1,5 +1,8 @@
 # Change Log
 
+### v2.1.0
+* Explicitly depend on jQuery
+
 ### v2.0.1
 * Set a default value for regions if it's empty. Solves [FlowRouter/#283](https://github.com/kadirahq/flow-router/issues/283)
 
