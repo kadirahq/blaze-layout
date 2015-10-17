@@ -26,6 +26,7 @@ function configure(api) {
   api.use('reactive-dict');
   api.use('underscore');
   api.use('jquery');
+  api.use('tracker');
 
   api.addFiles('lib/client/namespace.js', 'client');
   api.addFiles('lib/client/layout.js', 'client');
