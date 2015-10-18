@@ -1,5 +1,9 @@
 # Change Log
 
+### v2.2.0
+* Add support for rootNode is defined via a template. Gives better support for BlazeComponents. See: [#50](https://github.com/kadirahq/blaze-layout/pull/50)
+* Add tracker to the package list
+
 ### v2.1.0
 * Explicitly depend on jQuery
 
