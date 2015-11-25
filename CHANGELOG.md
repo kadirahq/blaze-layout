@@ -1,5 +1,9 @@
 # Change Log
 
+### v2.3.0
+* Use Blaze's DOMBackend API. See: [#38](https://github.com/kadirahq/blaze-layout/pull/38)
+* Display an error when there is no template. See: [#48](https://github.com/kadirahq/blaze-layout/pull/49)
+
 ### v2.2.0
 * Add support for rootNode is defined via a template. Gives better support for BlazeComponents. See: [#50](https://github.com/kadirahq/blaze-layout/pull/50)
 * Add tracker to the package list
