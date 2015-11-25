@@ -83,4 +83,4 @@ Add following code inside on the top of one of your client side JS file:
 BlazeLayout.setRoot('body');
 ~~~
 
-You can set any CSS selector or any jQuery object as the root.
+You can set any CSS selector, DOM Node, or jQuery object as the root.
