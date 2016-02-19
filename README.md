@@ -1,10 +1,10 @@
 # BlazeLayout (kadira:blaze-layout) [![Build Status](https://travis-ci.org/kadirahq/blaze-layout.svg?branch=master)](https://travis-ci.org/kadirahq/blaze-layout)
 
-> This project is earlier known as **meteorhacks:flow-layout**. This is an exact copy of FlowLayout but in a different name.
+> This project was earlier known as **meteorhacks:flow-layout**. This is an exact copy of FlowLayout but in a different name.
 
 ### Blaze Layout Manager for Meteor
 
-This is a layout manager designed for Blaze. This is built to use with FlowRouter but, this can be used without FlowRouter too. This is a very simple layout manager. It will does following:
+This is a layout manager designed for Blaze. This is built to use with FlowRouter but, this can be used without FlowRouter too. This is a very simple layout manager. It does the following:
 
 * Allow you to render a layout template to the UI
 * Allow you to pass data to the layout
