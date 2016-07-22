@@ -23,7 +23,7 @@ function configure(api) {
   api.versionsFrom('1.0');
   api.use('blaze');
   api.use('templating');
-  api.use('reactive-dict');
+  api.use('jagi:reactive-map@2.0.0');
   api.use('underscore');
   api.use('jquery');
   api.use('tracker');
